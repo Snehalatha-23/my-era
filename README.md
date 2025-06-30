@@ -1,154 +1,118 @@
-# Sticker Canvas Studio
+# 🖼️ Sticker Canvas Studio
 
-A beautiful, interactive sticker canvas application built with React and react-konva for the MyEra Frontend Internship mini-task.
+An interactive, creative, and beautifully crafted canvas app built using **React**, **TypeScript**, and **react-konva** for the **MyEra Frontend Internship mini-task**. Place, move, delete, and export vibrant emoji stickers with pixel-perfect precision on a dynamic 2D canvas.
+
+> 🔥 Designed & Developed with ❤️ by **Sneha Latha Medasari**
+
+🌐 **Live Demo**: [my-era.vercel.app](https://my-era.vercel.app)
+
+---
 
 ## 🎨 Features
 
-### Core Functionality
-- **Interactive Canvas**: 600×400 pixel canvas for sticker placement
-- **Sticker Library**: Three emoji stickers (😀, 🎉, ⭐) with one-click addition
-- **Drag & Drop**: Smooth dragging of stickers within canvas boundaries
-- **PNG Export**: High-quality download of your canvas creation
+### 🔧 Core Functionality
+- **Interactive Canvas** – 600×400 pixel sticker-friendly zone
+- **Emoji Sticker Palette** – Add stars, smiles, and confetti (⭐ 😃 🎉)
+- **Drag & Drop** – Move stickers around with smooth interactions
+- **Export as PNG** – Download your masterpiece with one click
 
-### Bonus Features
-- **Double-Click Deletion**: Remove stickers with a double-click
-- **Grid Snapping**: 40px grid alignment for precise positioning
-- **Grid Overlay**: Toggle grid visibility for better alignment
-- **Canvas Tools**: Clear all stickers with confirmation
+### 🎁 Bonus Capabilities
+- ✨ **Double-Click to Delete** – Clean up your canvas instantly
+- 🧲 **Snap to 40px Grid** – Achieve pixel-perfect alignment
+- 🧰 **Canvas Controls** – Clear all stickers with a confirmation prompt
+- 📏 **Optional Grid Overlay** – Visual snapping guide for pros
 
-### Design Highlights
-- Modern gradient background and card-based layout
-- Smooth hover animations and micro-interactions
-- Responsive design that works on all screen sizes
-- Professional typography and color system
-- Shadow effects and rounded corners for depth
+---
 
-## 🚀 Getting Started
+## 🧰 Tech Stack
 
-### Prerequisites
-- Node.js (version 14 or higher)
-- npm or yarn package manager
+| Layer         | Tools Used                                   |
+|---------------|-----------------------------------------------|
+| Framework     | React (with Vite)                             |
+| Drawing       | Konva & react-konva                           |
+| Styling       | Tailwind CSS                                  |
+| Icons         | Lucide React                                  |
+| Language      | TypeScript                                     |
+| Deployment    | Vercel                                         |
 
-### Installation
+---
 
-1. Clone the repository:
+## 🚀 How to Run Locally
+
+### ⚙️ Prerequisites:
+- Node.js ≥ 14.x
+- npm or yarn
+
+### 🛠️ Steps:
 ```bash
-git clone <repository-url>
-cd myera-sticker-canvas
-```
-
-2. Install dependencies:
-```bash
+git clone https://github.com/Snehalatha-23/my-era.git
+cd my-era
 npm install
-```
-
-3. Start the development server:
-```bash
 npm run dev
-```
+Open your browser: http://localhost:5173
 
-4. Open your browser and navigate to `http://localhost:5173`
+💡 Usage Guide
+➕ Add a Sticker: Click any emoji from the sidebar
 
-## 🛠️ Built With
+🎯 Move It: Drag to desired location on the canvas
 
-- **React 18** - UI framework with hooks and functional components
-- **react-konva** - React wrapper for Konva 2D canvas library
-- **Konva** - High-performance 2D canvas library
-- **Tailwind CSS** - Utility-first CSS framework
-- **Vite** - Fast build tool and development server
-- **TypeScript** - Type safety and better developer experience
-- **Lucide React** - Beautiful, customizable icons
+❌ Remove It: Double-click the sticker to delete
 
-## 📱 How to Use
+🧲 Snap It: Align to grid for precision
 
-1. **Add Stickers**: Click any sticker button in the sidebar to add it to the canvas
-2. **Move Stickers**: Drag stickers around the canvas to position them
-3. **Delete Stickers**: Double-click any sticker to remove it
-4. **Grid Alignment**: Toggle the grid to see alignment guides
-5. **Download**: Click "Download PNG" to save your creation
-6. **Clear Canvas**: Use "Clear Canvas" to start over
+💾 Download Art: Hit "Download PNG" to save your layout
 
-## 🎯 Technical Implementation
+🧹 Clear Canvas: Reset everything with one tap
 
-### State Management
-- Uses React's `useState` for managing sticker array
-- Each sticker has unique ID, emoji, position (x, y), and scale properties
-- Grid snapping rounds positions to nearest 40px intervals
+🧱 Project Structure
+perl
+Copy
+Edit
+my-era/
+├── src/
+│   ├── components/
+│   │   ├── Canvas.tsx          # Konva stage and logic
+│   │   ├── StickerButton.tsx   # Buttons to add emoji
+│   │   └── StickerItem.tsx     # Individual sticker logic
+│   ├── App.tsx                 # State management & layout
+│   ├── main.tsx                # Entry point
+│   └── index.css               # Tailwind styles
+├── public/
+│   └── assets/                 # Optional sticker PNGs
+├── package.json
+└── README.md
+🎨 Design Aesthetics
+🎨 Gradient backgrounds for a modern look
 
-### Canvas Rendering
-- Konva Stage component creates the main canvas area
-- Layer component organizes stickers and grid elements
-- Text components render emoji stickers with shadows and hover effects
+📐 Grid overlay to guide precision
 
-### User Interactions
-- Click handlers for adding stickers
-- Drag event handlers with boundary constraints
-- Double-click handlers for deletion with immediate feedback
-- Hover states and cursor changes for better UX
+🧠 Intuitive UX with hover/click feedback
 
-### Export Functionality
-- Uses Konva's `toDataURL()` method for high-quality PNG export
-- Creates temporary download link with timestamp filename
-- 2x pixel ratio for crisp, high-resolution output
+🪄 Micro-animations for interactivity
 
-## 📁 Project Structure
+💎 Clean shadows & rounded corners
 
-```
-src/
-├── components/
-│   ├── Canvas.tsx          # Main canvas component with Konva Stage
-│   ├── StickerItem.tsx     # Individual sticker rendering and interactions
-│   └── StickerButton.tsx   # Sticker selection buttons with animations
-├── App.tsx                 # Main application component and state management
-├── main.tsx               # React DOM rendering entry point
-└── index.css              # Tailwind CSS imports and global styles
-```
+📦 Development Scripts
+bash
+Copy
+Edit
+npm run dev      # Start dev server
+npm run build    # Build for production
+npm run preview  # Preview production locally
+npm run lint     # Lint your code
+📸 Demo Gallery
+(Add screenshots or Loom video link here)
 
-## 🎨 Design System
+👩‍💻 Creator
+Sneha Latha Medasari
+📧 medasarisneha@gmail.com
+🌐 Portfolio
+🔗 GitHub
+🔗 LinkedIn
 
-### Colors
-- **Primary**: Blue (#3B82F6) for interactive elements
-- **Secondary**: Purple (#8B5CF6) for accents
-- **Success**: Green (#10B981) for positive actions
-- **Error**: Red (#EF4444) for destructive actions
-- **Neutral**: Grays for text and backgrounds
+📄 License
+This project is developed as part of the MyEra Frontend Internship mini-task and is shared for evaluation, learning, and creativity purposes.
 
-### Typography
-- Modern system font stack for optimal readability
-- Clear hierarchy with appropriate font weights
-- Consistent spacing and line heights
-
-### Animations
-- Smooth 200ms transitions for all interactive elements
-- Scale transforms on button press for tactile feedback
-- Hover effects with color and transform changes
-
-## 🔧 Development Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint for code quality
-
-## 📈 Performance Considerations
-
-- Efficient re-rendering with proper React key props
-- Konva's optimized canvas rendering for smooth interactions
-- Minimal state updates during drag operations
-- Lazy loading of canvas elements
-
-## 🎭 Demo
-
-The application demonstrates:
-- Intuitive sticker placement and arrangement
-- Smooth drag interactions with visual feedback
-- Professional UI design with attention to detail
-- Export functionality for sharing creations
-
-## 📄 License
-
-This project is created for the MyEra Frontend Internship evaluation.
-
-## 👨‍💻 Author
-
-Created with ❤️ for the MyEra Frontend Internship mini-task.
+✨ Inspiration
+Thanks to the Konva and React ecosystems for enabling such magical web canvas interactions.
+Inspired by the joy of digital expression and precision design.
